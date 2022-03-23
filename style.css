@@ -1,0 +1,60 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    width: 100%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.row{
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    grid-template-areas: " h h h h h h h h h h h h "
+                          "b1 b1 b1 b2 b2 b2 b3 b3 b3 m m m"
+                          "c c c c c c c c c m m m "
+                          " f f f f f f f f f f f f ";
+                          gap: 20px;
+}
+.row >div{
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+}
+.header{
+    grid-area: h;
+    background-color: aquamarine;
+    height: 100px;
+}
+.box1{
+    grid-area: b1;
+    background-color: cadetblue;
+    height: 200px;
+}
+.box2{
+    grid-area: b2;
+    background-color: cyan;
+    height: 200px;
+}
+.box3{
+    grid-area: b3;
+    background-color: darkgray;
+    height: 200px;
+}
+.menu{
+    grid-area: m;
+    background-color: darkolivegreen;
+    height: 600px;
+}
+.contant{
+grid-area: c;
+background-color: blanchedalmond;
+height: 375px;
+}
+.footer{
+grid-area: f;
+background-color: brown;
+height: 150px;
+}
